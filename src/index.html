@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idea</title>
+</head>
+
+<body class="root">
+
+<div class="page">
+
+    <section class="add-item">
+        <h2 class="add-item__heading">Добавление товара</h2>
+
+        <form name="add-item" class="add-item__form">
+            <fieldset class="add-item__fields">
+                <label for="name" class="add-item__label">Название товара<sup class="add-item__required"></sup>
+                </label>
+                <input type="text" placeholder="Введите наименование товара" class="add-item__input add-item__input_type_name" name="name" id="name">
+
+                <label for="description" class="add-item__label">Описание товара</label>
+                <textarea placeholder="Введите описание товара"
+                          class="add-item__input add-item__input_type_description" name="description" id="description"></textarea>
+
+                <label for="link" class="add-item__label">Ссылка на изображение товара<sup
+                        class="add-item__required"></sup></label>
+                <input type="url" placeholder="Введите ссылку"
+                       class="add-item__input add-item__input_type_link" name="link" id="link">
+
+                <label for="price" class="add-item__label">Цена товара<sup class="add-item__required"></sup></label>
+                <input type="text" placeholder="Введите цену"
+                       class="add-item__input add-item__input_type_price" name="price" id="price">
+
+                <button type="submit" class="add-item__button">Добавить товар</button>
+            </fieldset>
+        </form>
+
+    </section>
+
+    <section class="items">
+        <button class="items__sort">По умолчанию <img src="<%=require('../images/drop.svg')%>" alt="Выбрать"></button>
+
+        <ul class="items__grid">
+        </ul>
+    </section>
+</div>
+
+<template class="items__grid_template">
+    <li class="items-grid__card">
+        <button class="card__delete"></button>
+        <img src="" alt="" class="card__image">
+        <div class="card__description">
+            <h3 class="card__heading"></h3>
+            <p class="card__text"></p>
+            <p class="card__price"></p>
+        </div>
+    </li>
+</template>
+
+</body>
+</html>
